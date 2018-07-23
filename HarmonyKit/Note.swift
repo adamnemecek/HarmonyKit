@@ -6,20 +6,20 @@ public struct Note {
     let name: LetterName
     let accidental: Accidental
     let octave: Int
-    
+
     public var midi: Int {
         return self.chromaticValue + (octave + 2) * 12
     }
-    
+
     public init(_ name: LetterName, _ accidental: Accidental, _ octave: Int) {
         self.name = name
         self.accidental = accidental
         self.octave = octave
     }
-    
+
     var chromaticValue: Int {
         var noteValue = 0
-        
+
         // halfsteps from C which is reference 0
         switch (name) {
         case .C: noteValue = 0
@@ -30,7 +30,7 @@ public struct Note {
         case .A: noteValue =  9
         case .B: noteValue =  11
         }
-        
+
         // adjust for accidental
         return noteValue + accidental.rawValue
     }

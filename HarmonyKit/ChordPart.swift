@@ -11,7 +11,7 @@ enum ChordPart {
     case sharpFifth
     case flatSeventh
     case seventh
-    
+
     var index: Int {
         switch self {
         case .first: return 0
@@ -26,7 +26,7 @@ enum ChordPart {
         case .seventh: return 6
         }
     }
-    
+
     var accidental: Accidental {
         switch self {
         case .first: return .natural

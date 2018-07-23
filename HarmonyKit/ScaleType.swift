@@ -11,7 +11,7 @@ public enum ScaleType {
     case mixolydian
     case aeolian
     case locrian
-    
+
     var intervals: [Interval] {
         switch self {
         case .major: return [.M2, .M3, .P4, .P5, .M6, .M7]
@@ -26,7 +26,7 @@ public enum ScaleType {
         case .locrian: return [.m2, .m3, .P4, .D5, .m6, .m7]
         }
     }
-    
+
     var triads: [ChordType] {
         switch self {
         case .major: return [.major, .minor, .minor, .major, .major, .minor, .diminished]
@@ -41,7 +41,7 @@ public enum ScaleType {
         case .locrian: return [.diminished, .major, .minor, .minor, .major, .major, .minor]
         }
     }
-    
+
     public var roman: [String] {
         switch self {
         case .major: return ["I", "ii", "iii", "IV", "V", "vi", "vii°"]

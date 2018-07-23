@@ -30,7 +30,7 @@ extension Accidental: CustomStringConvertible {
             return "𝄪"
         }
     }
-    
+
     func description(_ stripNatural: Bool) -> String {
         switch self {
         case .natural:
